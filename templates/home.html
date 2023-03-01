@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hey Dad?</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial;
+            font-size: 16px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type=text] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input[type=submit], button {
+            background-color: #0085ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #f44336;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            max-height: 200px;
+            overflow: auto;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>I am here to teach you anything your Dad would, what can I help you with today?</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ask me anything">
+        <input type="submit" value="Send">
+        <button type="button" onclick="clearOutput()">Clear</button>
+    </form>
+    <div id="output">{% if response_text %}{{ response_text }}{% endif %}</div>
+    <script>
+        function clearOutput() {
+            document.getElementById('output').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
