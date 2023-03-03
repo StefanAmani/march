@@ -2,6 +2,8 @@ import openai
 import os
 from flask import Flask, render_template, request
 
+DEBUG=True
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey'
 
@@ -34,7 +36,7 @@ def home():
     else:
         return render_template('templates/home.html')
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #port = int(os.environ.get("PORT", 80))
-    app.run(debug=True, port=port)
+    #app.run(debug=True, port=port)
 
