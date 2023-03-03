@@ -35,6 +35,6 @@ def home():
         return render_template('templates/home.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 80))
+    #port = int(os.environ.get("PORT", 80))
     app.run(debug=True, port=port)
 
