@@ -33,7 +33,7 @@ def load():
         # Extract response text from API response
         response_text = response.choices[0].text.strip()
         # Return response text to template
-        return render_template("load.html", response_text=response_text)
+        return render_template("home.html", response_text=response_text)
    
 if __name__ == "__main__":
     app.run(debug=True)
