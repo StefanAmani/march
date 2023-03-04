@@ -50,17 +50,17 @@
     </style>
 </head>
 <body>
-    <h1>I am here to teach you anything your Dad would, what can I help you with today?</h1>
-    <form method="POST">
-        <input type="text" name="user_input" placeholder="Ask me anything">
-        <input type="submit" value="Send">
-        <button type="button" onclick="clearOutput()">Clear</button>
-    </form>
-    <div id="output">{% if response_text %}{{ response_text }}{% endif %}</div>
-    <script>
-        function clearOutput() {
-            document.getElementById('output').innerHTML = '';
-        }
-    </script>
+    <header>
+        <div class="container">
+            <h1 class="logo">Hey Dad?</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('load') }}">Enter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>Thank you for coming press Enter to ask a question?</h1>
 </body>
 </html>
