@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'mysecretkey'
 # Set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route("/")
 def home():
